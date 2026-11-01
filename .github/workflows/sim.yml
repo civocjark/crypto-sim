@@ -1,0 +1,33 @@
+name: crypto-sim
+on:
+  schedule:
+    - cron: "0 * * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: crypto-sim
+  cancel-in-progress: false
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 75
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install numpy requests
+      - run: python sim.py
+        env:
+          TG_TOKEN: ${{ secrets.TG_TOKEN }}
+          TG_CHAT_ID: "7973526581"
+      - name: Ulozit stav
+        if: always()
+        run: |
+          git config user.name "crypto-sim-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add state.json REPORT.md || true
+          git commit -m "stav $(date -u +%F_%H:%M)" || echo "bez zmien"
+          git pull --rebase || true
+          git push || true
