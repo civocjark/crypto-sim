@@ -1,14 +1,14 @@
 # Fiktívny krypto test: 100 $ → ?
 
-Štart: 01.11. 18:33 · koniec: 08.11. 18:33 (náš čas) · behy: 10
-Aktualizované: 04.11. 04:49 · **žiadne skutočné peniaze**
+Štart: 01.11. 18:33 · koniec: 08.11. 18:33 (náš čas) · behy: 11
+Aktualizované: 04.11. 12:22 · **žiadne skutočné peniaze**
 
 | Účet | Hodnota | Zmena | Obchody | Úspešnosť | Poplatky | Max prepad |
 |---|---|---|---|---|---|---|
 | A · momentum 1× | 100.00 $ | +0.0% | 0 | – | 0.00 $ | 0% |
 | B · momentum 5× | 100.00 $ | +0.0% | 0 | – | 0.00 $ | 0% |
 | D · momentum 10× (lotéria) | 100.00 $ | +0.0% | 0 | – | 0.00 $ | 0% |
-| C · držať BTC | 97.53 $ | -2.5% | 0 | – | 0.10 $ | -4% |
+| C · držať BTC | 100.51 $ | +0.5% | 0 | – | 0.10 $ | -4% |
 
 Pravidlá: vstup do kryptomeny s najsilnejším pohybom za 1 h (nad 20-sviečkovým priemerom, BTC nepadá),
 len ak Simulátor (10 000 ciest na 2 h) dá kladný očakávaný výsledok po poplatkoch.
